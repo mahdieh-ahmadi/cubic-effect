@@ -1,0 +1,190 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.container{
+  width: 100%;
+  height: 100vh ;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)),url(../image/img20.jpg) center no-repeat ;
+  background-size: cover ;
+}
+.viwe{
+ 
+  width: 42vw;
+  height: 21vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  perspective: 1300px;
+}
+.viwe::after{
+  content: '';
+  position: absolute;
+  background-color: black;
+  width: 85%;
+  height: 7vw;
+  top: 120%;
+  left: 10%;
+  filter: blur(50px);
+}
+.cube{
+  width: 100%;
+  height:7vw ;
+  position: relative;
+  transform-style: preserve-3d;
+  
+  
+}
+.slide1{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+}
+.slide2{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  
+}
+.cube1{
+  transition: transform 0.4s;
+}
+.cube2{
+  z-index: 100;
+  transition: transform 0.4s 0.2s;
+}
+.cube3{
+  transition: transform 0.4s 0.4s;
+}
+.slide3{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ 
+}
+.front{
+  transform:translateZ(21vw);
+}
+.cube1 .front{
+  background: url(../image/img32.jpg) no-repeat 50% 0;
+  background-size: cover;
+}
+.cube2 .front{
+  background: url(../image/img32.jpg) no-repeat 50% -7vw;
+  background-size: cover;
+}
+.cube3 .front{
+  background: url(../image/img32.jpg) no-repeat 50% -14vw;
+  background-size: cover;
+}
+.back{
+  
+  transform:translateZ(-21vw) rotateY(180deg);
+}
+.cube1 .back{
+  background: url(../image/img31.jpg) no-repeat 50% 0;
+  background-size: cover;
+}
+.cube2 .back{
+  background: url(../image/img31.jpg) no-repeat 50% -7vw;
+  background-size: cover;
+}
+.cube3 .back{
+  background: url(../image/img31.jpg) no-repeat 50% -14vw;
+  background-size: cover;
+}
+.left{
+  
+  transform:translatex(-21vw) rotateY(-90deg);
+}
+.cube1 .left{
+  background: url(../image/img33.jfif) no-repeat 50% 0;
+  background-size: cover;
+}
+.cube2 .left{
+  background: url(../image/img33.jfif) no-repeat 50% -7vw;
+  background-size: cover;
+}
+.cube3 .left{
+  background: url(../image/img33.jfif) no-repeat 50% -14vw;
+  background-size: cover;
+}
+.right{
+  background-color: blue;
+  transform:translatex(21vw) rotateY(90deg);
+}
+.cube1 .right{
+  background: url(../image/london.jfif) no-repeat 50% 0;
+  background-size: cover;
+}
+.cube2 .right{
+  background: url(../image/london.jfif) no-repeat 50% -7vw;
+  background-size: cover;
+}
+.cube3 .right{
+  background: url(../image/london.jfif) no-repeat 50% -14vw;
+  background-size: cover;
+}
+.top{
+  width: 42vw;
+  height: 42vw;
+  background-color: rgb(48, 48, 49);
+  transform:translatey(-21vw) rotatex(90deg);
+}
+.bottom{
+  width: 42vw;
+  height: 42vw;
+  background-color: rgb(48, 48, 49);
+  transform:translatey(-14vw) rotatex(-90deg);
+}
+.control{
+  z-index: 500;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(54, 84, 85);
+  color: white;
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+.fas{
+ touch-action: none;
+}
+.control i{
+  pointer-events: none;
+}
+.control:hover{
+  background-color: rgb(31, 44, 44);
+}
+.arrow-right{
+  top:40% ;
+  left: 125%;
+}
+.arrow-left{
+  top: 40%;
+  left: -30%;
+}
+.play{
+  top: 125%;
+  left: 100%;
+  font-size: 13px;
+}
+
+@media(max-width : 500px){
+  .control{
+    width: 25px;
+  height: 25px;
+  }
+  .control i{
+    font-size: 12px;
+  }
+}
